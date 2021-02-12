@@ -1,0 +1,15 @@
+{% extends 'review/header.html' %}
+
+
+{% block content %}
+
+
+<h1>This is the home page</h1>
+
+<ul>
+    {% for review in reviews %}
+    <li><a href="{% url 'viewreview' review.id %}"> {{ review.title }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock  %}
